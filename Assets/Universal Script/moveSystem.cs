@@ -53,9 +53,9 @@ public class moveSystem : MonoBehaviour
         float player_1Y = Mathf.Abs(this.transform.localPosition.y - player_1.transform.position.y);
         float player_2Y = Mathf.Abs(this.transform.localPosition.y - player_2.transform.position.y);
 
-        if ((player_1X <= 0.5f && player_1Y <=0.5f) || (player_2X <= 0.5f && player_2Y <= 0.5f))
+        if ((player_1X <= 1f && player_1Y <=1f) || (player_2X <= 1f && player_2Y <= 1f))
         {
-            if(player_1X <= 0.5f && player_1Y <= 0.5f)
+            if(player_1X <= 1f && player_1Y <= 1f)
             {
                 GameManager.instane.P1.mass += weight;
                 //Destroy(this.gameObject);
@@ -64,7 +64,7 @@ public class moveSystem : MonoBehaviour
                 
                 //Destroy(GetComponent<moveSystem>());
             }
-            if ((player_2X <= 0.5f && player_2Y <= 0.5f))
+            if ((player_2X <= 1f && player_2Y <= 1f))
             {
                 GameManager.instane.P2.mass += weight;
                 //Destroy(this.gameObject);
