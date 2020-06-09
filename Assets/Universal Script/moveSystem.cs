@@ -61,6 +61,7 @@ public class moveSystem : MonoBehaviour
                 //Destroy(this.gameObject);
                 this.transform.position = GameManager.instane.Player_1.transform.position;
                 this.transform.parent = GameManager.instane.Player_1.transform;
+                GameManager.instane.weight.Add(this.gameObject);
                 
                 //Destroy(GetComponent<moveSystem>());
             }
@@ -70,6 +71,7 @@ public class moveSystem : MonoBehaviour
                 //Destroy(this.gameObject);
                 this.transform.position = GameManager.instane.Player_2.transform.position;
                 this.transform.parent = GameManager.instane.Player_2.transform;
+                GameManager.instane.weight.Add(this.gameObject);
                 //Destroy(GetComponent<moveSystem>());
             }
         }

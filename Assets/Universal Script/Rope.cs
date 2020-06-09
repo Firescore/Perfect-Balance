@@ -6,6 +6,7 @@ public class Rope : MonoBehaviour
 {
     List<GameObject> ropeComponents = new List<GameObject>();
     public List<Rigidbody> rb = new List<Rigidbody>();
+    public List<HingeJoint> hg = new List<HingeJoint>();
 
     public float mass;
     public float drag;
@@ -27,11 +28,21 @@ public class Rope : MonoBehaviour
         {
             rb.Add(ropeComponents[i].GetComponent<Rigidbody>());
         }
+        for (int i = 0; i < ropeComponents.Count; i++)
+        {
+            hg.Add(ropeComponents[i].GetComponent<HingeJoint>());
+        }
         for (int i = 0; i < rb.Count; i++)
         {
             rb[i].mass = mass;
             rb[i].drag = drag;
             rb[i].angularDrag = angularDrag;
+        }
+    }
+    public void removeHG()
+    {
+        for (int i = 0; i < hg.Count; i++)
+        {
         }
     }
 }
