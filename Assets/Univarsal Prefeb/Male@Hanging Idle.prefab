@@ -325,9 +325,9 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 1320c19c78a38aa46b10255f2397c581, type: 3}
   m_Controller: {fileID: 9100000, guid: e06ea48f3a6c74b49b78cfeeb8b0c34b, type: 2}
-  m_CullingMode: 1
+  m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -340,7 +340,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2336827705867744313}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 199f1e7ee74a1d84db9300f96471d494, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -360,7 +360,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 16
   m_CollisionDetection: 0
 --- !u!1 &2404626694881888608
 GameObject:
@@ -504,7 +504,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 1320c19c78a38aa46b10255f2397c581, type: 3}
+  - {fileID: 2100000, guid: e175c000059de474199527dff85272d8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

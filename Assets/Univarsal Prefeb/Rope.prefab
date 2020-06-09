@@ -91,7 +91,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215658252709070089}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -123,7 +123,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 5.6843413e-13, y: -1.0400151, z: 0}
+  m_ConnectedAnchor: {x: -0.22999272, y: -1.1100042, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 10
@@ -158,7 +158,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0015385151, y: 0.15523057, z: 0}
+  m_ConnectedAnchor: {x: 0.0022306808, y: 0.13584617, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 10
@@ -305,7 +305,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0030768649, y: 0.13515383, z: -0.00015184225}
+  m_ConnectedAnchor: {x: 0.0030768649, y: 0.13515383, z: 0.00015184225}
   m_UseSpring: 1
   m_Spring:
     spring: 10
@@ -455,7 +455,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544129104706208150}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -487,7 +487,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 5.6843413e-13, y: -1.0400103, z: 0}
+  m_ConnectedAnchor: {x: -0.26499018, y: -1.0650039, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 10
@@ -522,7 +522,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 5.6843413e-13, y: 1.6099881, z: 0}
+  m_ConnectedAnchor: {x: -0.26499048, y: 1.124996, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 10
@@ -1263,7 +1263,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350938091123639052}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -1295,7 +1295,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 5.6843413e-13, y: -1.040008, z: 0}
+  m_ConnectedAnchor: {x: -0.23368146, y: -0.9479061, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 10
@@ -1330,7 +1330,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 5.6843413e-13, y: 1.5599917, z: 0}
+  m_ConnectedAnchor: {x: -0.28999344, y: 1.0849965, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 10
@@ -1667,7 +1667,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787952016033398351}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -1699,7 +1699,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 5.6843413e-13, y: -1.0400103, z: 0}
+  m_ConnectedAnchor: {x: -0.27999386, y: -1.0400021, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 10
@@ -1734,7 +1734,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 5.6843413e-13, y: 1.5599917, z: 0}
+  m_ConnectedAnchor: {x: -0.23499267, y: 1.0899973, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 10
@@ -1960,7 +1960,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2324133880494219122}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -2546,7 +2546,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2775671893144213534}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -3092,7 +3092,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4331381400978956819}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -3124,7 +3124,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 7.3516793, y: 3.692432, z: 0}
+  m_ConnectedAnchor: {x: -0.1906261, y: -0.9948829, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 10
@@ -3159,7 +3159,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 5.6843413e-13, y: 1.5599917, z: 0}
+  m_ConnectedAnchor: {x: -0.26931313, y: 1.1675102, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 10
@@ -3638,7 +3638,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4584549415565217763}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -3670,7 +3670,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 5.6843413e-13, y: -1.0400056, z: 0}
+  m_ConnectedAnchor: {x: -0.22998795, y: -1.1300063, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 10
@@ -3705,7 +3705,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 5.6843413e-13, y: 1.6099881, z: 0}
+  m_ConnectedAnchor: {x: -0.25498882, y: 1.1149943, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 10
@@ -4505,15 +4505,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4981164797622688091}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b357694f3214574f8797a12ba87edb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: []
-  mass: 1
-  drag: 0
-  angularDrag: 0.05
+  mass: 0.25
+  drag: 0.5
+  angularDrag: 5
 --- !u!1 &5049649424376314694
 GameObject:
   m_ObjectHideFlags: 0
@@ -4605,7 +4605,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5049649424376314694}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -4787,7 +4787,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5153842004077746237}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -5080,7 +5080,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7089768647438329597}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -5147,7 +5147,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.24216254, y: 1.0161123, z: 0}
+  m_ConnectedAnchor: {x: -0.27112564, y: 1.1190639, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 10
