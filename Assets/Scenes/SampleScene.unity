@@ -374,7 +374,8 @@ PrefabInstance:
       propertyPath: angularDrag
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8187807982386781732, guid: f880dabc79be629498dc304df8fdc4c2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f880dabc79be629498dc304df8fdc4c2, type: 3}
 --- !u!1 &651814978
 GameObject:
@@ -623,8 +624,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.7019774e-38, y: 2.7105054e-20, z: 2.3509887e-38,
-    w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1211,7 +1211,6 @@ GameObject:
   - component: {fileID: 1145907063}
   - component: {fileID: 1145907062}
   - component: {fileID: 1145907061}
-  - component: {fileID: 1145907065}
   - component: {fileID: 1145907066}
   m_Layer: 0
   m_Name: Cylinder
@@ -1295,22 +1294,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 5.39, y: 90, z: 90}
---- !u!54 &1145907065
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1145907060}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &1145907066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1323,7 +1306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b23172f5532812d4fb3770c4d5febc92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
 --- !u!1 &1439584682
 GameObject:
   m_ObjectHideFlags: 0
@@ -1451,10 +1433,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedDown: 0.1
   speedUp: 0.1
-  normalizeSpeed: 1
+  normalizeSpeed: 0.85
   weight: 0
-  speedCheckD: 0
-  speedCheckU: 0
+  normalize: 0
+  movingUp: 0
+  movingDown: 0
+  springSpeed: 0.2
+  springUp: -1.9
+  springDown: -2.1
 --- !u!54 &1597673168 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 3898319443696391465, guid: a1cd715d1ebd9f54782bd1ef22331490,
@@ -1835,6 +1821,8 @@ MonoBehaviour:
   speed: 1
   Player_1: {fileID: 4891877061876383383}
   Player_2: {fileID: 8296172668152544821}
+  Rope1: {fileID: 1490858907}
+  Rope2: {fileID: 2145717168}
   P1: {fileID: 0}
   P2: {fileID: 0}
   endPos1: {x: 0, y: 0, z: 0}
@@ -2114,10 +2102,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedDown: 0.1
   speedUp: 0.1
-  normalizeSpeed: 1
+  normalizeSpeed: 0.85
   weight: 0
-  speedCheckD: 0
-  speedCheckU: 0
+  normalize: 0
+  movingUp: 0
+  movingDown: 0
+  springSpeed: 0.2
+  springUp: -1.8
+  springDown: -2.1
 --- !u!1001 &3898319444287364089
 PrefabInstance:
   m_ObjectHideFlags: 0

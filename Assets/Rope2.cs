@@ -9,12 +9,18 @@ public class Rope2 : MonoBehaviour
     public float speedUp = 1;
     public float normalizeSpeed;
     public float weight;
+    public float springSpeed;
+    public float springUp;
+    public float springDown;
 
-    [Header("Test")]
-    public float speedCheckD;
-    public float speedCheckU;
 
+    public bool movingDown = false;
+    public bool movingUp = false;
+    public bool normalize = false;
+    public bool stopSpring = false;
     Vector3 initialPos;
+    bool rechedUP = false;
+
     private void Start()
     {
         r2 = this;
@@ -23,6 +29,7 @@ public class Rope2 : MonoBehaviour
     void Update()
     {
         checkWeight();
+        //moveUpDown();
     }
 
     void checkWeight()
@@ -31,7 +38,6 @@ public class Rope2 : MonoBehaviour
         {
             if(Rope1.r.weight == 0)
             {
-                speedCheckD = speedDown * weight;
                 goDown(speedDown* weight);
 
 
@@ -39,7 +45,6 @@ public class Rope2 : MonoBehaviour
             }
             if(Rope1.r.weight != 0)
             {
-                speedCheckD = speedDown * (weight - Rope1.r.weight);
                 goDown(speedDown* (weight - Rope1.r.weight));
 
 
@@ -51,7 +56,6 @@ public class Rope2 : MonoBehaviour
         {
             if (weight == 0)
             {
-                speedCheckU = speedUp * Rope1.r.weight;
                 goUp(speedUp * Rope1.r.weight);
 
 
@@ -59,7 +63,6 @@ public class Rope2 : MonoBehaviour
             }
             if (weight != 0)
             {
-                speedCheckU = speedUp * (Rope1.r.weight - weight);
                 goUp(speedUp* (Rope1.r.weight-weight));
 
 
@@ -70,8 +73,10 @@ public class Rope2 : MonoBehaviour
         if (GameManager.instane.weight.Count == 3 && Rope1.r.weight == weight)
         {
             backToInitial();
-            GameManager.instane.endRotateL();
-            GameManager.instane.endRotateR();
+
+            if (normalize)
+                StartCoroutine(spring(5));
+
         }
     }
 
@@ -85,6 +90,52 @@ public class Rope2 : MonoBehaviour
     }
     public void backToInitial()
     {
-        transform.position = Vector3.MoveTowards(transform.position, initialPos, normalizeSpeed * Time.deltaTime);
+        if (!normalize)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, initialPos, normalizeSpeed * Time.deltaTime);
+            GameManager.instane.endRotateL();
+            GameManager.instane.endRotateR();
+            if (transform.position == initialPos)
+                normalize = true;
+        }
+        
     }
+    IEnumerator spring(float time)
+    {
+        moveUpDown();
+        yield return new WaitForSeconds(time);
+        transform.position = Vector3.MoveTowards(transform.position, initialPos, normalizeSpeed * Time.deltaTime);
+        stopSpring = true;
+    }
+    public void moveUpDown()
+    {
+        if (!stopSpring)
+        {
+            if (!rechedUP)
+            {
+
+                transform.Translate(Vector3.up * springSpeed * Time.deltaTime);
+                WheelRotator.wr.rotator(1, 50);
+                movingUp = true;
+                movingDown = false;
+                if (transform.position.y >= springUp)
+                    rechedUP = true;
+
+
+            }
+
+            if (rechedUP)
+            {
+                transform.Translate(Vector3.down * springSpeed * Time.deltaTime);
+                WheelRotator.wr.rotator(-1, 50);
+                movingUp = false;
+                movingDown = true;
+                if (transform.position.y <= springDown)
+                    rechedUP = false;
+            }
+        }
+        
+        
+    }
+   
 }

@@ -55,14 +55,14 @@ public class GameManager : MonoBehaviour
     {
         if (Rope1.position.y < Rope2.position.y)
         {
-            WheelRotator.wr.rotator(-1,100);
+            WheelRotator.wr.rotator(-1,75);
         }
     }   
     public void endRotateR()
     {
         if (Rope1.position.y > Rope2.position.y)
         {
-            WheelRotator.wr.rotator(1,100);
+            WheelRotator.wr.rotator(1,75);
         }
     }
 }
