@@ -11,19 +11,22 @@ public class GameManager : MonoBehaviour
 
     public GameObject Player_1; 
     public GameObject Player_2;
-    //public GameObject active;
 
+
+    [Header("---------------------")]
+    public Transform Rope1;
+    public Transform Rope2;
+
+    [Header("---------------------")]
     public Rigidbody P1;
     public Rigidbody P2;
 
-    [SerializeField]
-    Vector3 Player1_initialPos;
-    [SerializeField]
-    Vector3 Player2_initialPos;
+    public Vector3 endPos1;
+    public Vector3 endPos2;
 
     public bool gameStarted = false;
     public bool removeGravity = false;
-    bool mouseclick = false;
+
 
     public List<GameObject> weight = new List<GameObject>();
     private void Start()
@@ -36,39 +39,30 @@ public class GameManager : MonoBehaviour
         }
         
     }
-
-
     private void Update()
     {
-        startGame();
+        if(weight.Count == 3 && !removeGravity)
+        {
+/*            endPos1 = Player_1.transform.position;
+            endPos2 = Player_2.transform.position;*/
 
 
+            
+            removeGravity = true;
+        }
     }
-    void startGame()
+    public void endRotateL()
     {
-        if (gameStarted)
+        if (Rope1.position.y < Rope2.position.y)
         {
-            if (P1.mass == P2.mass && weight.Count == 3)
-            {
-                removeGravity = true;
-                if (removeGravity)
-                {
-                    P1.isKinematic = true;
-                    P2.isKinematic = true;
-                    FindObjectOfType<Rope>().removeHG();
-                    Player_1.transform.position = /*Player1_initialPos;*/Vector3.Lerp(this.transform.position, Player1_initialPos,speed);
-                    Player_2.transform.position = /*Player2_initialPos;*/Vector3.Lerp(this.transform.position, Player2_initialPos,speed);
-                }
-            }
+            WheelRotator.wr.rotator(-1,100);
         }
-
-        if (Input.GetMouseButtonDown(0) && !mouseclick)
+    }   
+    public void endRotateR()
+    {
+        if (Rope1.position.y > Rope2.position.y)
         {
-            gameStarted = true;
-            Player1_initialPos = Player_1.transform.position;
-            Player2_initialPos = Player_2.transform.position;
-            mouseclick = true;
+            WheelRotator.wr.rotator(1,100);
         }
     }
-
 }
