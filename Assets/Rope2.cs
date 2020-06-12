@@ -39,15 +39,14 @@ public class Rope2 : MonoBehaviour
             if(Rope1.r.weight == 0)
             {
                 goDown(speedDown* weight);
-
-
+                GameManager.instane.anime2.SetBool("Hang",true);
                 WheelRotator.wr.rotator(-1,50);
             }
             if(Rope1.r.weight != 0)
             {
                 goDown(speedDown* (weight - Rope1.r.weight));
 
-
+                GameManager.instane.anime2.SetBool("Hang", true);
                 WheelRotator.wr.rotator(-1,50);
             }
             
@@ -58,20 +57,21 @@ public class Rope2 : MonoBehaviour
             {
                 goUp(speedUp * Rope1.r.weight);
 
-
+                GameManager.instane.anime2.SetBool("Hang", false);
                 WheelRotator.wr.rotator(1,50);
             }
             if (weight != 0)
             {
                 goUp(speedUp* (Rope1.r.weight-weight));
 
-
+                GameManager.instane.anime2.SetBool("Hang", false);
                 WheelRotator.wr.rotator(1,50);
             }
 
         }
         if (GameManager.instane.weight.Count == 3 && Rope1.r.weight == weight)
         {
+            GameManager.instane.anime2.SetBool("Hang", false);
             backToInitial();
 
             if (normalize)

@@ -18,8 +18,8 @@ public class GameManager : MonoBehaviour
     public Transform Rope2;
 
     [Header("---------------------")]
-    public Rigidbody P1;
-    public Rigidbody P2;
+    public Animator anime1;
+    public Animator anime2;
 
     public Vector3 endPos1;
     public Vector3 endPos2;
@@ -32,11 +32,11 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         instane = this;
-        if(P1 || P2 == null)
+/*        if(P1 || P2 == null)
         {
             P1 = Player_1.GetComponent<Rigidbody>();
             P2 = Player_2.GetComponent<Rigidbody>();
-        }
+        }*/
         
     }
     private void Update()

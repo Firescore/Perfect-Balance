@@ -66,7 +66,21 @@ public class moveSystem : MonoBehaviour
             if (player_1X <= 1f && player_1Y <= 1f)
             {
                 Rope1.r.weight += weight;
-                this.transform.position = GameManager.instane.Player_1.transform.position;
+                //this.transform.LookAt(player_1.transform);
+                if (weight == 3)
+                    this.transform.position = new Vector3(GameManager.instane.Player_1.transform.position.x, GameManager.instane.Player_1.transform.position.y + 0.75f, GameManager.instane.Player_1.transform.position.z-1f);
+                if(weight == 4)
+                {
+                    this.transform.position = new Vector3(GameManager.instane.Player_1.transform.position.x - 0.3f, GameManager.instane.Player_1.transform.position.y + 0.75f, GameManager.instane.Player_1.transform.position.z - 1);
+                    transform.rotation = Quaternion.Euler(-121.934f, -90, 90);
+                }
+                   
+                if (weight == 7)
+                {
+                    this.transform.position = new Vector3(GameManager.instane.Player_1.transform.position.x + 0.6f, GameManager.instane.Player_1.transform.position.y + 0.7f, GameManager.instane.Player_1.transform.position.z - 1);
+                    transform.rotation = Quaternion.Euler(-133f, 90, -90);
+                }
+                    
                 this.transform.parent = GameManager.instane.Player_1.transform;
                 GameManager.instane.weight.Add(this.gameObject);
 
@@ -74,7 +88,22 @@ public class moveSystem : MonoBehaviour
             if ((player_2X <= 1f && player_2Y <= 1f))
             {
                 Rope2.r2.weight += weight;
-                this.transform.position = GameManager.instane.Player_2.transform.position;
+                //this.transform.LookAt(player_2.transform);
+                if (weight == 3)
+                    this.transform.position = new Vector3(GameManager.instane.Player_2.transform.position.x, GameManager.instane.Player_2.transform.position.y + 0.75f, GameManager.instane.Player_2.transform.position.z-1);
+                if (weight == 4)
+                {
+                    this.transform.position = new Vector3(GameManager.instane.Player_2.transform.position.x + 0.3f, GameManager.instane.Player_2.transform.position.y + 0.75f, GameManager.instane.Player_2.transform.position.z - 1);
+                    transform.rotation = Quaternion.Euler(-121.934f, 90, -90);
+                }
+                    
+                if (weight == 7)
+                {
+                    this.transform.position = new Vector3(GameManager.instane.Player_2.transform.position.x - 0.6f, GameManager.instane.Player_2.transform.position.y + 0.7f, GameManager.instane.Player_2.transform.position.z - 1);
+                    transform.rotation = Quaternion.Euler(-133f, -90, 90);
+                }
+                    
+                /*this.transform.position = new Vector3(GameManager.instane.Player_2.transform.position.x, GameManager.instane.Player_2.transform.position.y + 0.65f, GameManager.instane.Player_2.transform.position.z*//* - 0.5f*//*);*/
                 this.transform.parent = GameManager.instane.Player_2.transform;
                 GameManager.instane.weight.Add(this.gameObject);
 

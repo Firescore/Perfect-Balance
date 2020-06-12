@@ -14,6 +14,6 @@ public class WheelRotator : MonoBehaviour
     public void rotator(float sign, float speed)
     {
         angle += Time.deltaTime * speed * sign;
-        transform.localRotation = Quaternion.Euler(angle, 90,90);
+        transform.localRotation = Quaternion.Euler(0, 0, -angle);
     }
 }
