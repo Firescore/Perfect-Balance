@@ -167,7 +167,7 @@ public class GameManager : MonoBehaviour
     public void distacne_R2()
     {
         D2 = Mathf.Abs(Player_2.transform.position.y - waterlevel2.transform.position.y);
-        if (D2 < 0.3f && !isParantSetTrue2 && !fallDown2)
+        if (D2 < 0.2f && !isParantSetTrue2 && !fallDown2)
         {
            // Player_2.transform.parent = null;
             Player_2.transform.position = new Vector3(-1.37f, -5.52f, -2.93f);
