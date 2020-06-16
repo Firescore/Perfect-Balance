@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -84,6 +85,8 @@ public class GameManager : MonoBehaviour
         {
             gameOver = true;
         }
+        if (Input.GetKeyDown(KeyCode.R))
+            restart();
         distacne_R1();
         distacne_R2();
         GameOver();
@@ -104,7 +107,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+    public void restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 
     public void GameOver()
     {
@@ -145,6 +151,8 @@ public class GameManager : MonoBehaviour
         if (D1 < 1f && !isParantSetTrue1 && !fallDown1)
         {
             //Player_1.transform.parent = null;
+            r2.speedUp = r2.speedUp * 10;
+            r1.speedDown = r1.speedDown * 22;
             Player_1.transform.position = new Vector3(1.771f, -5.4f, -2.82f);
             sidePlayer_1.transform.position = new Vector3(2.443927f, -5.714768f, -1.635189f);
 
@@ -169,7 +177,9 @@ public class GameManager : MonoBehaviour
         D2 = Mathf.Abs(Player_2.transform.position.y - waterlevel2.transform.position.y);
         if (D2 < 0.2f && !isParantSetTrue2 && !fallDown2)
         {
-           // Player_2.transform.parent = null;
+            // Player_2.transform.parent = null;
+            r1.speedUp = r1.speedUp * 10;
+            r2.speedDown = r2.speedDown * 22;
             Player_2.transform.position = new Vector3(-1.37f, -5.52f, -2.93f);
             Player_2.transform.rotation = Quaternion.Euler(-120, 90, 90);
             Player_2.transform.parent = Croco2.transform;
@@ -214,17 +224,25 @@ public class GameManager : MonoBehaviour
         Player_1.transform.position = new Vector3(-1.61f, 1.154366f, 0.25f);
         sidePlayer_1.transform.position = new Vector3(-1.43f, 1.299915f, 0.39f);
 
+        Player_1.transform.rotation = Quaternion.Euler(180, -45, 0);
+        sidePlayer_1.transform.rotation = Quaternion.Euler(180, -90, 0);
+
         Player_1.GetComponent<Rigidbody>().isKinematic = false;
         Player_1.GetComponent<Rigidbody>().useGravity = true;
+        Player_1.GetComponent<Rigidbody>().AddForce(Physics.gravity, ForceMode.Impulse);
 
         sidePlayer_1.GetComponent<Rigidbody>().isKinematic = false;
         sidePlayer_1.GetComponent<Rigidbody>().useGravity = true;
+        sidePlayer_1.GetComponent<Rigidbody>().AddForce(Physics.gravity, ForceMode.Impulse);
     }
     public void fallDownP2()
     {
         Player_2.transform.position = new Vector3(1.51f, 1.95f, 0.47f);
+        Player_2.transform.rotation = Quaternion.Euler(180, 0, 0);
+        
         Player_2.GetComponent<Rigidbody>().isKinematic =false;
         Player_2.GetComponent<Rigidbody>().useGravity = true;
+        Player_2.GetComponent<Rigidbody>().AddForce(Physics.gravity, ForceMode.Impulse);
     }
 
 }
